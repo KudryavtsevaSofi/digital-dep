@@ -279,45 +279,34 @@ function Task2_6() {
     function lastIndexOfNeg (arr) {
         let arr1 = []
         let arr2 = []
-        let arr3 = []
         for (let i = 0; i< arr.length; i++){ 
             arr1[i] = arr[i].filter (el => { //массив отрицательных чисел строки
             arrNeg = el < 0;
             return arrNeg
             })
             console.log(arr1[i])
-            for (let j = 0; j < 1; j++){
-                arr2[j] = arr1[i].filter (el => { //массив с последним отрицательным числом
-                lastNeg = el === arr1[i].at(-1)
-                return lastNeg
-                })
-                console.log(arr2[j])
-                let elem = +arr2.join('')//преобразование массив-число
-                console.log(elem)
-                for (let h = 0; h < 1; h++){ //запись индексов отрицательных элементов в arr3
-                    arr3[h] = arr.filter (el => { //массив индексов отрицательных чисел матрицы
-                        let indNeg = el === arr.indexOf(elem)
-                        return indNeg
-                        })
-                console.log(arr3[h])
-                }
-            }
+            lastNeg = arr1[i].at(-1) //последний отрицательный элемент
+            console.log(lastNeg)
+            arr2[i] = arr[i].indexOf(lastNeg)+1 //запись номеров отрицательных элементов в arr3
+            console.log(arr2[i])
         }
+        console.log(arr2)
+        return arr2
     }
 
     alert("функция, принимающая на вход вещественную прямоугольную матрицу и возвращающая одномерный массив, элементами которого будут номера последних отрицательных элементов строк матрицы");
-    // n = Number(prompt("Введите количество столбцов"));
-    // m = Number(prompt("Введите количество строк"));
-    // let arr = [];
-    let arr = [[1, -4, -6], [-5, 4, -2], [-7, 8, -1]]
+    n = Number(prompt("Введите количество столбцов"));
+    m = Number(prompt("Введите количество строк"));
+    let arr = [];
+    // let arr = [[1, -4, 6], [-5, 4, 2], [-7, 8, -1]]
 
-    // for (let i = 0; i < m; i++){ //цикл для заполнения матрицы элементами
-    //     arr[i]= [];
-    //     for (let j = 0; j < n; j++){
-    //         let value = +prompt('Введите число');
-    //         arr[i].push(value)
-    //     }
-    // }
+    for (let i = 0; i < m; i++){ //цикл для заполнения матрицы элементами
+        arr[i]= [];
+        for (let j = 0; j < n; j++){
+            let value = +prompt('Введите число');
+            arr[i].push(value)
+        }
+    }
     lastIndexOfNeg(arr)
 }
 
