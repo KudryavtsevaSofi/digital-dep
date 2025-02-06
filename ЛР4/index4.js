@@ -273,7 +273,6 @@ function Task2_4() {
     console.log(res)
 }   
 
-// НЕ РАБОТАЕТ ПЕРЕДЕЛАТЬ
 //4.6 массив номеров последних отрицательных элементов строк
 function Task2_6() {
     function lastIndexOfNeg (arr) {
