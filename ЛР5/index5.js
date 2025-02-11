@@ -20,10 +20,10 @@ class studentClass {
     }  
     get fullName() {
         return `${this.name} ${this.surname}`;
-      }
+      }   
     set fullName(value) {
-    [this.name, this.surname] = value.split(" ");
-    }
+    [this.name, this.surname] = value.split(" "); 
+    } 
 }
 
 class marksClass {
