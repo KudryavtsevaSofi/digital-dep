@@ -76,3 +76,5 @@ function getAverageMark() {
 // console.log(marksClass.avgMarks())
 
 
+//тест коммит
+
