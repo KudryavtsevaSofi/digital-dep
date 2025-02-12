@@ -7,22 +7,21 @@ const studentVar = {
         {subjekt: 'физика', mark: 3}]
 }
 
-console.log(studentVar)
+function printStudentInfo(studentVar) {
+    console.log(`Студент: ${studentVar.firstName} ${studentVar.secondName}`);
+    console.log("Оценки:");
+    studentVar.marks.forEach(mark => {
+      console.log(`${mark.subjekt}: ${mark.mark}`);
+    });
+  }
+  
+  printStudentInfo(studentVar);
 
 class studentClass {
-    constructor (firstName, secondName, marks) {
+    constructor (firstName, secondName) {
         this.firstName = firstName;
         this.secondName = secondName;
-        this.marks = marks;  
-    }
-    info () {
-            console.log('Имя: ' + this.firstName + this.secondName + ', оценки: ' + JSON.stringify(this.marks))
-    }  
-    get fullName() {
-        return `${this.name} ${this.surname}`;
-      }   
-    set fullName(value) {
-    [this.name, this.surname] = value.split(" "); 
+        this.marks = [];  
     } 
 }
 
@@ -31,17 +30,38 @@ class marksClass {
         this.subjekt = subjekt;
         this.mark = mark; 
     }
-    get subjektMarks() {
-        return `${this.subjekt} ${this.mark}`;
-    }
-    set subjektMarks(value) {
-    [this.subjekt, this.mark] = value.split(" ");
-    }
 }
 
-let subjekt = new marksClass.subjekt(prompt("Введите предмет"))
-let mark = new marksClass.mark(prompt("Введите оценку"))
-console.log(marksClass)
+let task = parseFloat(prompt("1 - Вывод средней оценки студента по всем приедметам, 2 - Вывод оценок по заданному предмету, 3 - Добавление оценки по предмету, 4 - Удаление всех оценок по предмету", 1))
+switch (task)
+{
+    case 1:
+        Task1_1()
+        break
+    case 2:
+        Task1_2()
+        break
+    case 3:
+        addMark()
+        break
+    case 4:
+        addMark()
+        break
+}
+
+function addMark (subjekt, mark){
+    let newMark = new marksClass(subjekt, mark);
+    this.marks.push(newMark);
+    printStudentInfo(studentVar);
+}
+
+function getAverageMark() {
+    if (this.marks.length === 0) {
+      return 0;
+    }
+    const totalMarks = this.marks.reduce((sum, mark) => sum + mark.mark, 0);
+    return totalMarks / this.marks.length;
+  }
 
 // marksClass.avgMarks = function  () {
 //     let sum = 0;
