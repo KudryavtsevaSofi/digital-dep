@@ -73,25 +73,27 @@ student.addMark("Математика", 5);
 student.addMark("Физика", 4);
 student.addMark("Химия", 3);
 
-let task = parseFloat(prompt("1 - Вывод средней оценки студента по всем приедметам, 2 - Вывод оценок по заданному предмету, 3 - Добавление оценки по предмету, 4 - Удаление всех оценок по предмету", 1))
-switch (task)
-{
-    case 1:
-        student.getAverageMark();
-        student.printStudentInfo();
-        break
-    case 2:
-        student.alertSubjekt1();
-        student.printStudentInfo();
-        break
-    case 3:
-        student.alertAddMark();
-        student.printStudentInfo();
-        break
-    case 4:
-        student.alertSubjekt2();
-        student.printStudentInfo();
-        break
+while (true) {
+    let task = parseFloat(prompt("1 - Вывод средней оценки студента по всем приедметам, 2 - Вывод оценок по заданному предмету, 3 - Добавление оценки по предмету, 4 - Удаление всех оценок по предмету 5 - Выйти из программы", 1))
+    if (task === 5) break
+    switch (task)
+    {
+        case 1:
+            student.getAverageMark();
+            student.printStudentInfo();
+            break
+        case 2:
+            student.alertSubjekt1();
+            student.printStudentInfo();
+            break
+        case 3:
+            student.alertAddMark();
+            student.printStudentInfo();
+            break
+        case 4:
+            student.alertSubjekt2();
+            student.printStudentInfo();
+            break
+    }
 }
-
 
