@@ -2,14 +2,14 @@
 const studentVar = {
     firstName: 'Соня',
     secondName: 'Кудрявцева',
-    marks: [{subjekt: 'математика', mark: 5}, 
-        {subjekt: 'химия', mark: 4}, 
-        {subjekt: 'физика', mark: 3}]
+    marks: [{subject: 'математика', mark: 5}, 
+        {subject: 'химия', mark: 4}, 
+        {subject: 'физика', mark: 3}]
 }
 
 class marksClass {
-    constructor (subjekt, mark) {
-        this.subjekt = subjekt;
+    constructor (subject, mark) {
+        this.subject = subject;
         this.mark = mark; 
     }
 }
@@ -30,40 +30,40 @@ class studentClass {
         console.log(`Средняя оценка по всем предметам:  ` + resAvgMarks);
     }
 
-    alertSubjekt1 (){ //alert для ввода предмета
-        let subjekt = prompt("Введите название предмета:");
-        this.getMarksBySubjekt(subjekt);
+    alertsubject1 (){ //alert для ввода предмета
+        let subject = prompt("Введите название предмета:");
+        this.getMarksBysubject(subject);
     } 
 
-    getMarksBySubjekt(subjekt) { //4. метод, возвращающий все оценки по переданному предмету
-        console.log(this.marks.filter(mark => mark.subjekt === subjekt));
+    getMarksBysubject(subject) { //4. метод, возвращающий все оценки по переданному предмету
+        console.log(this.marks.filter(mark => mark.subject === subject));
     }
 
     alertAddMark (){ //alert для добавления оценки по предмету
-        let subjekt = prompt("Введите название предмета:");
+        let subject = prompt("Введите название предмета:");
         let mark = parseInt(prompt("Введите оценку:"));
-        this.addMark(subjekt, mark);
+        this.addMark(subject, mark);
     }
 
-    addMark (subjekt, mark){ //5. метод добавления оценки по предмету
-        let newMark = new marksClass(subjekt, mark);
+    addMark (subject, mark){ //5. метод добавления оценки по предмету
+        let newMark = new marksClass(subject, mark);
         this.marks.push(newMark);
     }
 
-    alertSubjekt2 (){ //alert для ввода предмета
-        let subjekt = prompt("Введите название предмета:");
-        this.removeMarksBySubjekt(subjekt);
+    alertsubject2 (){ //alert для ввода предмета
+        let subject = prompt("Введите название предмета:");
+        this.removeMarksBysubject(subject);
     }
 
-    removeMarksBySubjekt(subjekt) { //6. метод, удаляющий все оценки по переданному предмету
-        this.marks = this.marks.filter(mark => mark.subjekt !== subjekt);
+    removeMarksBysubject(subject) { //6. метод, удаляющий все оценки по переданному предмету
+        this.marks = this.marks.filter(mark => mark.subject !== subject);
     }
 
     printStudentInfo() { //метод вывода информации о студенте
         console.log(`Студент: ${this.firstName} ${this.secondName}`);
         console.log("Оценки:");
         this.marks.forEach(mark => {
-            console.log(`${mark.subjekt}: ${mark.mark}`);
+            console.log(`${mark.subject}: ${mark.mark}`);
         });
     }
 }
@@ -83,7 +83,7 @@ while (true) {
             student.printStudentInfo();
             break
         case 2:
-            student.alertSubjekt1();
+            student.alertsubject1();
             student.printStudentInfo();
             break
         case 3:
@@ -91,7 +91,7 @@ while (true) {
             student.printStudentInfo();
             break
         case 4:
-            student.alertSubjekt2();
+            student.alertsubject2();
             student.printStudentInfo();
             break
     }
