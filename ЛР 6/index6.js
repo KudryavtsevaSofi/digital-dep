@@ -64,7 +64,7 @@ function reverseStudents (data) { //1. функция, которая возвр
     }
     const sortedData = sortStudentsReverse(data);// Сортируем студентов
     const sortedJsonData = JSON.stringify(sortedData);// Преобразуем отсортированный объект обратно в JSON-строку
-    console.log(sortedJsonData);
+    // console.log(sortedJsonData);
 }
 
 function getAllStudentsByMark(data) { //2. функция, которая находит и возвращает индексы всех студентов в массиве, у которых есть указанная оценка по указанному предмету
@@ -116,12 +116,15 @@ while (true) {
     {
         case 1:
             reverseStudents(data);
+            studentsToMap(data);
             break
         case 2:
             getAllStudentsByMark(data);
+            studentsToMap(data);
             break
         case 3:
             getStudentByMark(data);
+            studentsToMap(data);
             break
         case 4:
             studentsToMap(data);
