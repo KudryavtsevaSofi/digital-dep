@@ -6,7 +6,7 @@ Students = `{
             "marks": [
                 {
                     "subject": "Математика",
-                    "mark": 5
+                    "mark": 2
                 },
                 {
                     "subject": "Физика",
@@ -24,7 +24,7 @@ Students = `{
             "marks": [
                 {
                     "subject": "Математика",
-                    "mark": 4
+                    "mark": 2
                 },
                 {
                     "subject": "Физика",
@@ -42,7 +42,7 @@ Students = `{
                 },
                 {
                     "subject": "Физика",
-                    "mark": 4
+                    "mark": 3
                 },
                 {
                     "subject": "Химия",
@@ -51,12 +51,30 @@ Students = `{
             ]
         },
         {
-            "lastName": "Никита",
-            "firstName": "Никитин",
+            "lastName": "Никитин",
+            "firstName": "Никита",
             "marks": [
                 {
                     "subject": "Математика",
                     "mark": 4
+                },
+                {
+                    "subject": "Физика",
+                    "mark": 4
+                },
+                {
+                    "subject": "Химия",
+                    "mark": 2
+                }
+            ]
+        },
+        {
+            "lastName": "Павлов",
+            "firstName": "Павел",
+            "marks": [
+                {
+                    "subject": "Математика",
+                    "mark": 5
                 },
                 {
                     "subject": "Физика",
@@ -69,8 +87,8 @@ Students = `{
             ]
         },
         {
-            "lastName": "Павел",
-            "firstName": "Павлов",
+            "lastName": "Руслан",
+            "firstName": "Русланов",
             "marks": [
                 {
                     "subject": "Математика",
@@ -78,7 +96,7 @@ Students = `{
                 },
                 {
                     "subject": "Физика",
-                    "mark": 4
+                    "mark": 2
                 },
                 {
                     "subject": "Химия",
@@ -86,11 +104,10 @@ Students = `{
                 }
             ]
         }
-        
     ]
 }`
 
-function studentsToMap (data) {//4. функция, которая превращает массив студентов в объект Map, где в качестве ключей используется строка, образованная конкатенацией имени и фамилии
+function studentsToMap (data) {//функция, которая превращает массив студентов в объект Map, где в качестве ключей используется строка, образованная конкатенацией имени и фамилии
     const map = new Map();
     data.students.forEach(student => {
         const key = `${student.firstName} ${student.lastName}`;
@@ -99,7 +116,7 @@ function studentsToMap (data) {//4. функция, которая превра�
     console.log(map)
 }
 
-function compareFIO (a, b) {
+function compareFIO (a, b) {//компоратор сортировки студентов по фамилии и имени
     const FIOa = a.lastName.toLowerCase() + a.firstName.toLowerCase();//приведение к нижнему регистру для реализации регистронезависимой сортировки
     const FIOb = b.lastName.toLowerCase() + b.firstName.toLowerCase();
     if (FIOa < FIOb) {
@@ -111,35 +128,79 @@ function compareFIO (a, b) {
     return 0;
 }
 
-function binarySearch (array, element, start = 0, end = array.lenght - 1) {
-    const middle = ((start + end) / 2);
-
-    if (element === array[middle.lastName] + + array[middle.firstName]) {
-        return middle;
+function binarySearch (students) {//бинарный поиск студента по фамилии и имени в массиве студентов
+    let targetLastName = prompt("Введите фамилию студента:");
+    let targetFirstName = prompt("Введите имя студента:");
+    let targetFIO = targetLastName+targetFirstName;
+    let left = 0;
+    let right = students.length - 1;
+    while (left <= right) {
+        const mid = Math.floor((left + right) / 2);
+        // console.log(mid)
+        const midStudent = data.students[mid];
+        let midFIO = midStudent.lastName+midStudent.firstName
+        // console.log(targetFIO, midFIO)
+        if (midFIO === targetFIO) {// Сравниваем фамилии и имена
+            return midStudent;
+        } else if (midFIO < targetFIO) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
     }
+    return false;
+}
 
-    if (start >= end) {
-        return -1;
-    }
-
-    if (element < array[middle.lastName] + + array[middle.firstName]) {
-        return binarySearch (array, element, start, middle - 1);
+function Task1res () {//результат 1 задания
+    const result = binarySearch(data.students);
+    if (result) {
+        console.log("Студент найден:", result);
     } else {
-        return binarySearch (array, element, middle + 1, end);
+        console.log("Студент не найден.");
     }
 }
 
-function Task1(data){
-    data.students.sort(compareFIO);
-    binarySearch(data);
+function Task1(data){//вызов функций 1 задания
+    console.log(data.students.sort(compareFIO));
+    Task1res (data);
+}
+
+function Task2(data){//вызов функций 2 задания
+    getAverageMark(data.students);
+    shellSort(data.students);
     studentsToMap (data);
+}
+
+function getAverageMark(students) { //функция, возвращающая среднюю оценку студента по всем предметам
+    students.forEach(student => {
+        const totalMarks = student.marks.reduce((sum, mark) => sum + mark.mark, 0);
+        const averageMark = totalMarks / student.marks.length;
+        student.averageMark = averageMark;
+    });
+    
+}
+
+function shellSort(students) {//функция сортировки Шелла
+    let d = Math.floor(students.length / 2);
+    while (d > 0) {
+        for (let i = d; i < students.length; i++) {
+            let temp = students[i];
+            let j = i;
+            while (j >= d && students[j - d].averageMark > temp.averageMark) {
+                students[j] = students[j - d];
+                j -= d;
+            }
+            students[j] = temp;
+        }
+        d = Math.floor(d / 2);
+    }
 }
 
 const data = JSON.parse(Students);// Преобразуем JSON-строку в объект JavaScript
 
 while (true) {
-    let task = parseFloat(prompt("1 - массив студентов, 2 - Сортировка Шелла, 3 - Индекс первого студента в массиве, у которого есть указанная оценка 4 - Массив студентов в виде объекта map, 5 - Удаление студентов, у которых нет оценок по заданному предмету, 6 - Выход", 1))
-    if (task === 6) break
+    let task = parseFloat(prompt("1 - массив студентов, 2 - Бинарный поиск студентов, 3 - Сортировка Шелла, 4 - Выход", 1))
+    if (task === 4) break
     switch (task)
     {
         case 1:
@@ -149,7 +210,7 @@ while (true) {
             Task1(data);
             break
         case 3:
-            getStudentByMark(data);
+            Task2(data);
             break
     }
 }
