@@ -1,0 +1,36 @@
+/* Задание 3 */
+/* Стили для input по умолчанию */
+#textInput {
+    border: 2px solid #7284a3;
+    padding: 5px;
+    border-radius: 4px;
+}
+/* Стили для input при фокусе */
+#textInput:focus {
+    border: 4px solid #2c364e;
+    outline: none;
+    border-radius: 6px;
+}
+
+.container1, .container2, .container3, .container4 {
+    margin: 15px;
+    padding: 10px;
+    background-color: #c4c4c4;
+    border-radius: 5px;
+}
+
+button {
+    border: none;
+    /* border-radius: 10px; */
+    text-decoration: none;
+    color: white;
+    background: #7284a3;
+    box-shadow: 0 2px 1px #2c364e;
+}
+
+button:hover {
+    background: #2c364e;
+    box-shadow: none;
+    position: relative;
+    top: 2px;
+}
