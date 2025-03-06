@@ -1,0 +1,17 @@
+img {
+    width: 180px;
+    border-radius: 10px;
+}
+
+.textContainer {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: auto;
+    margin: 20px;
+}
+
+.empty-container {
+    height: 200px;
+    width: 300px;
+    border: 2px dashed rgb(0, 0, 0);
+}
