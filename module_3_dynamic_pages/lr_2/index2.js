@@ -1,12 +1,12 @@
 $(document).ready(function(){
-    // Задание 1
+    // Задание 2
     document.getElementById('changeTextButton').addEventListener('click', function() {
         $('.container1 p').html(function(){
         return '<p>Вы изменили текст</p>'
         });
     });
 
-    // Задание 2
+    // Задание 3
     $('#changeAttributeButton').click(function() {
         $('a').attr({
             'href': 'https://getbootstrap.com/',
@@ -14,7 +14,7 @@ $(document).ready(function(){
         });
     });
     
-    // Задание 3
+    // Задание 4
     $('#addImgeButton').click(function() {
         $('.textContainer p').each(function() {
             // Добавляем картинку до абзаца
@@ -24,14 +24,19 @@ $(document).ready(function(){
         });
     });
 
-    // Задание 4
+    // Задание 5
     $('#removeFirstPButton').click(function() {
         $('.textContainer p:first').remove();
     });
 
-    // Задание 4
+    // Задание 6
     $('#removeDivPButton').click(function() {
         $('.textContainer').empty();
         $('.textContainer').addClass('empty-container');
+    });
+
+    // Задание 7
+    $('#updateStylePButton').click(function() {
+        $('.textContainer').toggleClass('updateStyleСontainer');
     });
 });
