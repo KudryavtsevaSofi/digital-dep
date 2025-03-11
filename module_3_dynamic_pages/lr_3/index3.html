@@ -9,21 +9,51 @@
         <script src="index3.js"></script> 
     </head>
     <body>
-        
-        <div class="right-content">
-            <table class="table">
-                <tr>
-                    <th>Идентификатор</th>
-                    <th>Отдел</th>
-                    <th>Класс</th>
-                    <th>Порядок</th>
-                    <th>Семейство</th>
-                    <th>Род</th>
-                    <th>Вид</th>
-                    <th>Действие</th>
-                </tr>
-            </table>
+        <div class="header">
+            <img src="header-right.png" class="leftImg">
+            <img src="logo.png" class="logoImg">
+            <h3>РАСТЕНИЯ КРАСНОЙ КНИГИ</h3>
+            <img src="header-left.png" class="rightImg">
         </div>
+        <div class="container">
+            <div id="left" class="left-content">
+                <form id="my-form">
+                    <input class="d-none" type="text" id="id" name="id"><br>
+                    <label for="department">Отдел:</label><br>
+                    <input class="form-input" type="department" id="department" name="department" placeholder="Введите отдел"><br>
+                    <label for="class">Класс:</label><br>
+                    <input class="form-input" type="class" id="class" name="class" placeholder="Введите класс"><br>
+                    <label for="form">Порядок:</label><br>
+                    <input class="form-input" type="form" id="form" name="form" placeholder="Введите порядок"><br>
+                    <label for="family">Семейство:</label><br>
+                    <input class="form-input" type="family" id="family" name="family" placeholder="Введите семейство"><br>
+                    <label for="genus">Род:</label><br>
+                    <input class="form-input" type="genus" id="genus" name="genus" placeholder="Введите род"><br>
+                    <label for="type">Вид:</label><br>
+                    <input class="form-input" type="type" id="type" name="type" placeholder="Введите вид"><br>
+                    <div class="submit-btn">
+                        <input class="green-btn" type="submit" value="Добавить"><br>
+                    </div>
+                </form>
+            </div>
 
+            <div class="right-content">
+                <div class="table-header">
+                    <input class="inputSearch" type="text" id="search" placeholder="Поиск...">
+                </div>
+                <table class="table">
+                    <tr>
+                        <th>Идентификатор</th>
+                        <th>Отдел</th>
+                        <th>Класс</th>
+                        <th>Порядок</th>
+                        <th>Семейство</th>
+                        <th>Род</th>
+                        <th>Вид</th>
+                        <th>Действие</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </body>
 </html>

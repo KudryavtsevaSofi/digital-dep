@@ -1,0 +1,75 @@
+.header {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+h3 {
+    padding-top:35px;
+}
+
+.logoImg {
+    width: 40px;
+    margin-right: 20px;
+    padding-top:35px;
+}
+
+.leftImg, .rightImg {
+    height: 100px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+/* Общий контейнер для left-content и right-content */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+/* Стили для left-content */
+.left-content {
+    flex: 1;
+    margin-right: 20px; /* Отступ между левым и правым контентом */
+}
+
+/* Стили для right-content */
+.right-content {
+    flex: 2;
+}
+
+/* Стили для формы */
+#my-form {
+    
+}
+
+/* Стили для кнопки отправки формы */
+.submit-btn {
+    margin-top: 10px;
+}
+
+/* Стили для таблицы */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.table th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+/* Стили для поля поиска */
+.inputSearch {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
