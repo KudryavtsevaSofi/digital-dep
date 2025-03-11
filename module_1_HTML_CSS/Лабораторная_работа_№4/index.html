@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа 4, 5</title>
+    <link rel="stylesheet" href="../Лабораторная_работа_№4/style3.css"/>
+</head>
+<body>
+    <div class="header">
+        <div class="block-left">
+            <h1>Таблицы и формы</h1>
+            <p>Цель работы: Научиться с помощью HTML добавлять на страницу таблицы и обрабатывать действия пользователя на странице с помощью
+                HTML форм.</p>
+        </div>
+        <div class="block-right">
+            <p>От создателей:</p>
+            <a class="link" href="../Лабораторная_работа_№1/index.html">Введение в HTML</a>
+            <br>
+            <a class="link" href="../Лабораторная_работа_№2/index.html">Введение в CSS</a>
+            <br>
+            <a class="link" href="../Лабораторная_работа_№3/index.html">Позиционирование элементов</a>
+            <br>
+            <a class="link" href="../Лабораторная_работа_№4/index.html">Таблицы</a>
+        </div>
+    </div>
+    <div class="block_table">
+        <table>
+        <caption><h2>Актерский состав фильма "Город кошек"</h2></caption>
+        <tr>
+            <th>Фото</th>
+            <th>Имя</th>
+            <th>Роль</th>
+            <th>Место рождения</th>
+            <th>Гражданство</th>
+        </tr>
+        <tr>
+            <td class="column1"> <img class="Photo" src="../Лабораторная_работа_№4/Deniz.jpg" title="Deniz"></td>
+            <td>Deniz</td>
+            <td>кот, играет самого себя</td>
+            <td>Сисли, Стамбул, Турция</td>
+            <td>Турция</td>
+        </tr>
+        <tr>
+            <td class="column1"> <img class="Photo" src="../Лабораторная_работа_№4/Duman.jpg" title="Duman"></td>
+            <td>Duman</td>
+            <td>кот, играет самого себя</td>
+            <td>Сисли, Стамбул, Турция</td>
+            <td>Турция</td>
+        </tr>
+        <tr>
+            <td class="column1"> <img class="Photo" src="../Лабораторная_работа_№4/Gamsiz.jpg" title="Gamsiz"></td>
+            <td>Gamsiz</td>
+            <td>кот, играет самого себя</td>
+            <td>Бейоглу, Стамбул, Турция</td>
+            <td>Турция</td>
+        </tr>
+        <tr>
+            <td class="column1"> <img class="Photo" src="../Лабораторная_работа_№4/Aslan_Parcasi.jpg" title="Aslan Parcasi"></td>
+            <td>Aslan Parcasi</td>
+            <td>кот, играет самого себя</td>
+            <td>Стамбул, Турция</td>
+            <td>Турция</td>
+        </tr>
+        <tr>
+            <td class="column1"> <img class="Photo" src="../Лабораторная_работа_№4/Psikopat.jpg" title="Psikopat"></td>
+            <td>Psikopat</td>
+            <td>кошка, играет саму себя</td>
+            <td>Фатих, Стамбул, Турция</td>
+            <td>Турция</td>
+        </tr>
+        <tr>
+            <td class="column1"> <img class="Photo" src="../Лабораторная_работа_№4/Sari.jpg" title="Sari"></td>
+            <td>Sari</td>
+            <td>кошка, играет саму себя</td>
+            <td>Стамбул, Турция</td>
+            <td>Турция</td>
+        </tr>
+        <tr>
+            <td class="column1"> <img class="Photo" src="../Лабораторная_работа_№4/Bengu.jpg" title="Bengu"></td>
+            <td>Bengu</td>
+            <td>кошка, играет саму себя</td>
+            <td>Стамбул, Турция</td>
+            <td>Турция</td>
+        </tr>
+        </table>
+    </div>
+    <div class="form">
+        <h3>Внесите данные об актерах</h3>
+        <div class="forrrm">
+        <div class="left_form">
+            <form>
+                <label for="name">Имя:</label><br>
+                    <input type="text" id="name" name="name"><br>
+                <label for="role">Роль:</label><br>
+                    <input type="text" id="role" name="role"><br>
+            </form>
+        </div>
+        <div class="fight_form">
+            <form>
+                <label for="place_of_birth">Место рождения:</label><br>
+                    <input type="text" id="place_of_birth" name="place_of_birth"><br>
+                <label for="citizenship">Гражданство:</label><br>
+                    <input type="text" id="citizenship" name="citizenship"><br>
+            </form>
+        </div>
+        </div>
+        <div class="center_form">
+            <form>
+                <input name="file" type="file" id="input__file" class="input input__file" multiple>
+                    <label for="input__file" class="input__file-button">
+                        <span class="input__file-icon-wrapper"><img class="input__file-icon" src="../Лабораторная_работа_№4/load.png" alt="Выбрать файл" width="25"></span>
+                        <span class="input__file-button-text">Загрузите фотографию</span>
+                    </label>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

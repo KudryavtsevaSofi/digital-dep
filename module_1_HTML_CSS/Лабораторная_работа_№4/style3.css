@@ -1,0 +1,211 @@
+body {
+    background-color: #aed1d6;
+    
+}
+
+.header, .block_table {
+    background-color: rgba(255, 255, 255, 0.6); 
+    margin: 20px 30px 20px 30px;
+    padding: 50px;
+    text-align: center;
+    border-radius: 30px;
+    overflow: auto;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+/* .header {
+    position: sticky;
+    top: 0;
+} */
+
+p {
+    color:#373730;
+    font-family: Courier New, monospace;
+}
+
+h1 {
+    color:#373730;
+    font-family: Courier New, monospace;  
+    font-size: 80px;
+    margin: auto;
+}
+
+h2 {
+    color:#373730;
+    font-family: Courier New, monospace;  
+    font-size: 40px;
+    margin: auto; 
+}
+
+h3 {
+    color:#373730;
+    font-family: Courier New, monospace;  
+    font-size: 25px;
+    margin: auto; 
+}
+
+/* блоки шапки */
+
+.block-left {
+    width: 70%;
+    float: left;
+}
+
+.block-right {
+    width: 30%;
+    float: right;
+    margin-top: 0;
+}
+
+.link {
+    color: #373730;
+    font-family: Courier New, monospace;
+}
+
+.Photo {
+    width: 100px;
+    border-radius: 10px;
+}
+
+/* таблица */
+
+table {
+    background-color: rgba(255, 255, 255, 0.577);
+    border: 3px solid #373730;
+    border-collapse: collapse;
+    width: 90%;
+    padding: 5px;
+    color:#373730;
+    font-family: Courier New, monospace;
+    margin: auto;
+}
+
+th {
+    border: 1px solid #373730;
+    border-collapse: collapse;
+    padding: 5px;
+    background-color: #aed1d6;
+    font-size: large;
+}
+
+td {
+    border: 1px solid #373730;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+.column1 {
+    width: 15px;
+}
+
+tr:hover {
+    background-color: #37373050;
+}
+
+caption {
+    margin-bottom: 20px;
+}
+
+/* блоки формы */
+
+.form {
+    background-color: rgba(255, 255, 255, 0.6); 
+    margin: 20px 30px 20px 30px;
+    padding: 50px;
+    border-radius: 30px;
+    overflow: auto;
+    box-shadow: 10px 10px 5px #888888; 
+    text-align: center;
+    font-family: Courier New, monospace;
+}
+
+.left_form {
+    width: 50%;
+    float: left;
+}
+
+.right_form {
+    width: 50%;
+    float: right;
+}
+
+input,
+textarea {
+    margin: 5px;
+    /* width: 300px;  */
+    max-width: 100%; почему не применяется к правому блоку?
+    min-width: 30%;
+    font: 0.9em/1.5em Courier New, monospace;
+    border: none;
+    border-radius: 5px;
+    padding: 0 10px;
+    background: rgba(255, 255, 255, 0.577);
+}
+
+input:focus,
+textarea:focus {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  outline: none;
+}
+
+.forrrm {
+    display: flex;
+    gap: 30px;
+}
+
+/* загрузка фото */
+
+.center_form {
+    margin: 10px;
+}
+
+.input__file {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+   
+  .input__file-icon-wrapper {
+    height: 45px;
+    width: 45px;
+    margin-right: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+    justify-content: center;
+    border-right: 1px solid;
+  }
+   
+  .input__file-button-text {
+    line-height: 1;
+    margin-top: 1px;
+    font-family: Courier New, monospace;
+  }
+   
+  .input__file-button {
+    width: 100%;
+    max-width: 290px;
+    height: 45px;
+    background: #aed1d6;
+    color: #373730;
+    font-size: 1.125rem;
+    font-weight: 700;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+    justify-content: flex-start;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 auto;
+  }

@@ -1,0 +1,135 @@
+@font-face {
+    font-family: "Creepster Cyrillic";  
+    src: url("creepster.otf"); 
+    font-style: normal; 
+    font-weight: normal;
+     }
+
+body {
+    background-image: url(лес_фон.jpg);
+    
+}
+
+.header {
+    background-color: rgba(0, 0, 0, 0.6); 
+    margin: 20px 30px 20px 30px;
+    padding: 50px;
+    text-align: center;
+    border-radius: 30px;
+    overflow: auto;
+}
+
+p {
+    color:#ffffff;
+    font-family: Courier New, monospace;
+}
+
+/* .links {
+    display: block;
+    float: right;
+    width: 50px;
+    height: 40px;
+} */
+
+h1 {
+    color:#a11e00;
+    font-family: "Creepster Cyrillic";  
+    font-size: 80px;
+    margin: auto;
+}
+
+.block-left {
+    width: 70%;
+    float: left;
+}
+
+.block-right {
+    width: 30%;
+    float: right;
+    margin-top: 100px;
+}
+
+.link {
+    color: #ffffff;
+    font-family: Courier New, monospace;
+}
+
+h2 {
+    color:#a11e00;
+    font-family: "Times, Times New Roman, serif"; 
+    font-size: 80px;
+}
+
+h2 span {
+    color:#ffffff;
+    font-family: "Times, Times New Roman, serif"; 
+    font-size: 80px;
+}
+
+.main_1, .main_2, .main_3 {
+    background-color: rgba(0, 0, 0, 0.6); 
+    margin: 20px 30px 20px 30px;
+    padding: 50px;
+    overflow: auto;
+    border-radius: 30px;
+    position: relative;
+}
+
+.img0 {
+    float: left;
+    width: 200px;
+    margin: 70px 30px 100px 0;
+}
+
+.img1 {
+    width: 400px;
+}
+
+.poster1 {
+    float: right;
+    width: 350px;
+    margin: 0 0 0 50px;
+}
+
+.img2 {
+    width: 400px;
+}
+
+.poster2 {
+    float: right;
+    width: 350px;
+    margin: 0 0 0 50px;
+}
+
+.poster3 {
+    float: right;
+    width: 350px;
+    margin: 0 0 0 50px;
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.6); 
+    margin: 20px 30px 20px 30px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.button {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+button {
+    background-color: rgba(255, 255, 255, 0.6); 
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+    font-family: Courier New bold, monospace;
+}

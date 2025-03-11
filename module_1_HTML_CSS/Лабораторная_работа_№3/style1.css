@@ -1,0 +1,146 @@
+.container, .container-2, .container-3, .container-4 {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px; 
+    border-radius: 40px;
+    margin: 20px 30px 20px 30px;
+}
+
+.block-center {
+    width: 200px;
+    height: 200px;
+    background-color: #a11e00;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.block-left_1 {
+    width: 200px;
+    height: 200px;
+    background-color: #a11e00;
+    border-radius: 30px;
+    margin-left: 0;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+
+.block-right_1 {
+    width: 200px;
+    height: 200px;
+    background-color: #a11e00;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+}
+
+h3 {
+    color: #ffffff;
+    font-family: "Times, Times New Roman, serif"; 
+    font-size: 50px; 
+    text-align: center;
+}
+
+.container-2 {
+    height: 400px;
+    align-items: center;
+    /* margin-left: auto;
+    margin-right: auto; */
+    display: flex;
+    justify-content: center;
+}
+
+.block-center_1 {
+    width: 200px;
+    height: 200px;
+    background-color: #a11e00;
+    border-radius: 30px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.container-3 {
+    border: 2px solid  #ffffff;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 40px;
+}
+
+.block-3 {
+    width: 200px;
+    height: 200px;
+    background-color: #a11e00;
+    border-radius: 30px;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-4 {
+    border: 2px solid  #ffffff;
+}
+
+.block-4 {
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    border: 2px solid  #ffffff;
+    position: relative;
+    left: 50px;
+    right: 0;
+    top: 50px;
+    bottom: 0;
+}
+
+.block-5 {
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    border: 2px solid   #a11e00;
+    position: relative;
+    left: 150px;
+    right: 0;
+    top: -50px;
+    bottom: 0;
+}
+
+.block-6 {
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    border: 2px solid   #7b7270;
+    position: relative;
+    left: 250px;
+    right: 0;
+    top: -150px;
+    bottom: 0;
+}
+
+.cat_fixed {
+    width: 150px;
+    height: 150px;
+    border-radius: 30px;
+    border: 2px solid  #ffffff;
+    margin: 20px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
