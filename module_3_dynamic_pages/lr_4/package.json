@@ -1,0 +1,19 @@
+{
+  "name": "digital-dep",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server -c ./bs-config.js -o"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KudryavtsevaSofi/digital-dep.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KudryavtsevaSofi/digital-dep/issues"
+  },
+  "homepage": "https://github.com/KudryavtsevaSofi/digital-dep#readme",
+  "description": ""
+}
