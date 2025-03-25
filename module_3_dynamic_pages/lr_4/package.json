@@ -11,6 +11,9 @@
   },
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  },
   "bugs": {
     "url": "https://github.com/KudryavtsevaSofi/digital-dep/issues"
   },
