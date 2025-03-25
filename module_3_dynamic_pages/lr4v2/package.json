@@ -1,0 +1,14 @@
+{
+  "name": "web-example",
+  "version": "1.0.0",
+  "description": "Example for students",
+  "scripts": {
+    "start": "lite-server -c ./bs-config.js -o"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  },
+  "dependencies": {}
+}
