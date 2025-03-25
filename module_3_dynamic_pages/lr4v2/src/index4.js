@@ -111,7 +111,7 @@ $(document).ready(function(){
 
     //Метод для изменения записи в массиве JSON
     function updatePlants(data) {
-        plants = plants.map((item) => {
+        plants = getPlants().map((item) => {
             if(item.id.toString() === data.id.toString()) {
                 return data;
             }
@@ -191,6 +191,28 @@ $(document).ready(function(){
         addRow(plant);
     };
 
+//Работа с localStorage и fetch
+    //Функции для получения и сохранения массива JSON элементов в localStorage
+    function getPlants() {
+        return JSON.parse(localStorage.getItem("plants"));
+    }
+
+    function setPlants(plants) {
+        return localStorage.setItem("plants", JSON.stringify(plants));
+    }
+
+    //Получение данных из JSON файла с помощью fetch
+    if (localStorage.hasOwnProperty("plants")) {
+        addRows();
+    } else {
+        fetch('plants.json')
+            .then(response => response.json())
+            .then(data => {
+                setPlants(data);
+                addRows();
+            });
+    }
+
     $("#my-form").submit(function (event) {
         const formData = new FormData(event.target);
         const data = Object.fromEntries(formData);
@@ -224,27 +246,5 @@ $(document).ready(function(){
     });
 
     addRows();
-
-    //Работа с localStorage и fetch
-    //Функции для получения и сохранения массива JSON элементов в localStorage
-    function getPlants() {
-        return JSON.parse(localStorage.getItem("plants"));
-    }
-
-    function setPlants(plants) {
-        return localStorage.setItem("plants", JSON.stringify(plants));
-    }
-
-    //Получение данных из JSON файла с помощью fetch
-    if (localStorage.hasOwnProperty("plants")) {
-        addRows();
-    } else {
-        fetch('plants.json')
-            .then(response => response.json())
-            .then(data => {
-                setPlants(data);
-                addRows();
-            });
-    }
 
 });
