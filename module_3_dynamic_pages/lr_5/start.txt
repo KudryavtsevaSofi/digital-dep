@@ -1,0 +1,6 @@
+Запуск 
+1. Перейти в репозиторий C:\Users\Sofia\Desktop\Репозиторий ЦК\digital-dep\module_3_dynamic_pages\lr4v2
+2. Прописать команду npm run start
+3. В поисковой строке браузера прописать http://localhost:8080/index4.html
+4. Очистить localstorage (application -> localstorage -> http://localhost:8080 -> Очистить -> перезагрузить страницу)
+5. Можно тестировать
