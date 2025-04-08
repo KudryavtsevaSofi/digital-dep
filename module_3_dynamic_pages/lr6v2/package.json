@@ -1,14 +1,14 @@
 {
-  "name": "lr6v2",
+  "name": "web-example",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Example for students",
   "scripts": {
     "start": "lite-server -c ./bs-config.js -o"
   },
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
     "lite-server": "^2.6.1"
-  }
+  },
+  "dependencies": {}
 }

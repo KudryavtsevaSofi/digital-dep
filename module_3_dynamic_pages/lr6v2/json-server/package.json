@@ -1,7 +1,7 @@
 {
-  "name": "simple-server-6",
+  "name": "simple-server",
   "version": "1.0.0",
-  "description": "Full fake REST API server-6",
+  "description": "Full fake REST API server",
   "main": "index.js",
   "scripts": {
     "start": "json-server --watch db.json"
