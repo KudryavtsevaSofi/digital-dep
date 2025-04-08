@@ -3,25 +3,25 @@ $(() => {
     const mainUrl = 'http://localhost:3000/plants/'; 
     const store = new DevExpress.data.CustomStore({
         key: 'id',
-        load() { //функция загрузки данных
-            return sendRequest(mainUrl); 
+        load() {
+            return sendRequest(mainUrl)
         },
-        insert(values) {//функция доставки данных
+        insert(values) {
             return sendRequest(mainUrl, 'POST', {
+                ...values
+            })
+        },
+        remove(key) {
+            return sendRequest(`${mainUrl}\\${key}`, 'DELETE');
+        },
+        update(key, values) {
+            return sendRequest(`${mainUrl}\\${key}`, 'PATCH', {
                 ...values
             });
         },
-        remove(key) { //функция удаления данных
-            return sendRequest(`${mainUrl}\\${key}`, 'DELETE');
-        },
-        update (key, values) { //функция обновления данных
-            return sendRequest(`${mainUrl}\\${key}`, 'PATCH', {
-                ...values
-            });  
-        },
     });
 
-    function sendRequest(url, method = 'GET', data) { //отправка данных на сервер
+    function sendRequest(url, method = 'GET', data) {
         const d = $.Deferred();
 
         $.ajax(url, {
@@ -38,13 +38,13 @@ $(() => {
     }
         
     $('#gridContainer').dxDataGrid({
-        dataSourses: store,
-        noDataText:'Ничего не найдено',
+        dataSource: store,
+        noDataText: 'Ничего не найдено',
         showBorders: true,
         searchPanel: {
             visible: true,
             width: 340,
-            placeholder: 'Поиск...',
+            placeholder: 'Введите данные для поиска...',
         },
         headerFilter: {
             visible: true,
@@ -71,14 +71,15 @@ $(() => {
             },
             form: {
                 items: [{
-                    itemsType: 'group',
+                    itemType: 'group',
                     colCount: 2,
                     colSpan: 2,
-                    items: ['department', 'class', 'form', 'family'],
+                    items: ['department', 'class', 'form', 'familyId'],
                 }, {
-                    itemsType: 'group',
+                    itemType: 'group',
                     colCount: 2,
                     colSpan: 2,
+                    // caption: 'Документы',
                     items: ['genus', 'type'],
                 }],
             },
@@ -106,14 +107,14 @@ $(() => {
         }, {
             caption: 'Семейство',
             width: 200,
-            dataField: 'family',
+            dataField: 'familyId',
             dataType: 'string',
             lookup: {
-                dataSourse: new DevExpress.data.CustomStore({
+                dataSource: new DevExpress.data.CustomStore({
                     key: 'id',
                     loadMode: 'raw',
                     load() {
-                        return sendRequest('http://localhost:3000/families/');
+                        return sendRequest(`http://localhost:3000/families/`);
                     },
                 }),
                 valueExpr: 'id',
